@@ -28,6 +28,9 @@ export default function Header() {
                     <a href="#wing-foils" className="text-sm font-medium transition-colors hover:text-primary">
                         Wing Foils
                     </a>
+                    <a href="#hydrofoils" className="text-sm font-medium transition-colors hover:text-primary">
+                        Hydrofoils
+                    </a>
                 </nav>
                 <Button
                     variant="ghost"

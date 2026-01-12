@@ -1,6 +1,6 @@
 {
-  "frontend/src/App.tsx": "Main application component that wraps the entire app with ThemeProvider and renders the header, main content sections (Hero, WhatIsSailing, WhyPeopleSail, AdventureAndNature, TheArtOfSailing, WingFoils), footer, and toast notifications.",
-  "frontend/src/components/Header.tsx": "Sticky header component with branding (anchor icon and title), navigation links to all page sections including the new Wing Foils section, and a theme toggle button for light/dark mode.",
+  "frontend/src/App.tsx": "Main application component that wraps the entire app with ThemeProvider and renders the header, main content sections (Hero, WhatIsSailing, WhyPeopleSail, AdventureAndNature, TheArtOfSailing, WingFoils, Hydrofoils), footer, and toast notifications.",
+  "frontend/src/components/Header.tsx": "Sticky header component with branding (anchor icon and title), navigation links to all page sections including Wing Foils and Hydrofoils, and a theme toggle button for light/dark mode.",
   "frontend/src/components/Hero.tsx": "Hero section with ocean gradient background, wave icon, and introductory heading about sailing.",
   "frontend/src/components/WhatIsSailing.tsx": "Content section explaining what sailing is with detailed paragraphs and three feature cards highlighting wind power, navigation, and seamanship.",
   "frontend/src/components/WhyPeopleSail.tsx": "Section describing why people love sailing with four detailed reason cards covering freedom, challenge, community, and adventure.",
@@ -10,5 +10,6 @@
   "frontend/tailwind.config.js": "Tailwind configuration extended with custom ocean and sunrise color tokens that reference CSS variables from the design system.",
   "frontend/src/hooks/useQueries.ts": "Empty placeholder file as no backend queries are needed for this static content website.",
   "frontend/src/components/TheArtOfSailing.tsx": "New content section exploring the artistry and craftsmanship of sailing with descriptive text and four feature cards highlighting sail trim, wind reading, maritime tradition, and boat handling, plus a detailed callout about the pursuit of excellence.",
-  "frontend/src/components/WingFoils.tsx": "Content section explaining wing foiling with descriptive text about its relationship to sailing and modern innovation, plus four feature cards highlighting speed and agility, freedom over water, modern wind technology, and learning curve."
+  "frontend/src/components/WingFoils.tsx": "Content section explaining wing foiling with descriptive text about its relationship to sailing and modern innovation, plus four feature cards highlighting speed and agility, freedom over water, modern wind technology, and learning curve.",
+  "frontend/src/components/Hydrofoils.tsx": "Content section explaining hydrofoil technology with descriptive text about how hydrofoils work under sailboats and their innovation in sailing, plus four feature cards highlighting lift and efficiency, speed advantages, technological design, and environmental benefits."
 }
