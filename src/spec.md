@@ -17,7 +17,10 @@ A simple informational website about sailing that presents educational content i
 - Feature cards within the Hydrofoils section highlighting key aspects: "Lift and Efficiency," "Speed Advantages," "Technological Design," and "Environmental Benefits"
 - Interactive sailing timeline spanning from approximately 6000 BC to 2026 AD
 - Timeline contains a complete static mapping with one entry for every year in the range
-- Timeline includes a detailed static lookup table for the first 1000 years (6000 BC to 5001 BC) with each year mapped to a fixed placeholder string of exactly 20 words
+- Timeline includes individual JSON or text files for the first 1000 years (6000 BC to 5001 BC) stored under `frontend/src/data/years/` directory
+- Each year file is named by year (e.g., `6000BC.json`, `5999BC.json`) and contains the same 20-word descriptive placeholder string about sailing history
+- Dynamic loading of year files on demand as users navigate through the timeline
+- Loading and error states for missing or failed file loads
 - Each timeline entry includes a 20-word descriptive placeholder string about sailing history
 - Scrollable or draggable interface for navigating through the extensive timeline
 - Clear, engaging writing style suitable for general audiences
@@ -28,7 +31,8 @@ A simple informational website about sailing that presents educational content i
 - Simple navigation structure that accommodates all sections including Wing Foils, Hydrofoils, and Timeline
 - Header navigation with jump links to all sections including Wing Foils, Hydrofoils, and Timeline
 - Interactive timeline component with intuitive scrolling/dragging functionality
-- Timeline spinner that renders individual year text strings from the lookup table
+- Timeline spinner that renders individual year text strings from dynamically loaded files
+- Loading indicators and error handling for timeline year data
 - Responsive design for different screen sizes
 - Professional typography for easy reading
 - Consistent design and spacing across all sections including the Timeline content
@@ -39,11 +43,13 @@ A simple informational website about sailing that presents educational content i
 ### Frontend
 - Static content presentation with Timeline section
 - SailingTimeline component with scrollable/draggable timeline interface
-- Timeline component contains a static JavaScript/TypeScript object mapping every year from ~6000 BC to 2026 AD to a 20-word descriptive placeholder string
-- Detailed static lookup table for the first 1000 years (6000 BC to 5001 BC) with each year mapped to exactly 20 words
-- Timeline data is embedded directly in the frontend code, not fetched dynamically
-- Timeline renders each year and its corresponding text properly in the UI
-- Timeline spinner displays individual year text strings demonstrating the year-to-text mapping format
+- Timeline component dynamically imports year files from `frontend/src/data/years/` directory
+- Individual JSON or text files for years 6000 BC to 5001 BC with 20-word placeholder strings
+- Lazy-loading implementation for year files as users scroll or navigate through timeline
+- Loading states and error handling for missing or failed file loads
+- Timeline data for years after 5001 BC remains embedded in frontend code
+- Timeline renders each year and its corresponding text properly in the UI with consistent behavior
+- Timeline spinner displays individual year text strings with smooth loading transitions
 - Feature card components for both Wing Foils and Hydrofoils sections
 - Updated navigation to include Timeline section
 - Seamless integration of timeline content into existing layout
@@ -53,4 +59,4 @@ A simple informational website about sailing that presents educational content i
 
 ### Backend
 - No backend functionality required
-- All content is static and embedded in the frontend
+- All content is static and embedded in the frontend or loaded from local files
