@@ -15,8 +15,9 @@ A simple informational website about sailing that presents educational content i
 - Feature cards within the Wing Foils section highlighting key aspects: "Speed and Agility," "Freedom Over Water," "Modern Wind Technology," and "Learning Curve"
 - Hydrofoils section explaining what hydrofoils are, how they work under sailboats, and why they are an innovation in sailing
 - Feature cards within the Hydrofoils section highlighting key aspects: "Lift and Efficiency," "Speed Advantages," "Technological Design," and "Environmental Benefits"
-- Interactive sailing timeline spanning from approximately 6000 BC to present day
-- Timeline displays chronological progression of sailing history with placeholder entries for each year
+- Interactive sailing timeline spanning from approximately 6000 BC to 2026 AD
+- Timeline contains a complete static mapping with one entry for every year in the range
+- Each timeline entry includes a 20-word descriptive placeholder string about sailing history
 - Scrollable or draggable interface for navigating through the extensive timeline
 - Clear, engaging writing style suitable for general audiences
 - Consistent depth and tone across all sections
@@ -34,9 +35,11 @@ A simple informational website about sailing that presents educational content i
 ## Technical Requirements
 
 ### Frontend
-- Static content presentation with additional Timeline section
+- Static content presentation with Timeline section
 - SailingTimeline component with scrollable/draggable timeline interface
-- Timeline component displays years from ~6000 BC to present with placeholder text entries
+- Timeline component contains a static JavaScript/TypeScript object mapping every year from ~6000 BC to 2026 AD to a 20-word descriptive placeholder string
+- Timeline data is embedded directly in the frontend code, not fetched dynamically
+- Timeline renders each year and its corresponding text properly in the UI
 - Feature card components for both Wing Foils and Hydrofoils sections
 - Updated navigation to include Timeline section
 - Seamless integration of timeline content into existing layout
