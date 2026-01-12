@@ -3,22 +3,35 @@ import { Clock, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
-// Static mapping of every year from 6000 BC to 2026 AD with 20-word descriptive placeholders
-const generateTimelineData = (): Record<number, string> => {
-    const data: Record<number, string> = {};
-    const startYear = -6000;
-    const endYear = 2026;
-    
-    for (let year = startYear; year <= endYear; year++) {
-        const absYear = Math.abs(year);
-        const era = year < 0 ? 'BC' : 'AD';
-        data[year] = `Sailing history placeholder for year ${absYear} ${era}: maritime developments, vessel innovations, navigation advances, trade routes, exploration milestones, and seafaring achievements during this period.`;
-    }
-    
-    return data;
-};
+// Static lookup table mapping each year to a fixed placeholder string (~20 words)
+const YEAR_DESCRIPTIONS: Record<number, string> = {};
 
-const TIMELINE_DATA = generateTimelineData();
+// Generate static descriptions for all years from 6000 BC to 2026 AD
+const startYear = -6000;
+const endYear = 2026;
+
+for (let year = startYear; year <= endYear; year++) {
+    const absYear = Math.abs(year);
+    const era = year < 0 ? 'BC' : 'AD';
+    
+    // Create unique but consistent placeholder text for each year
+    const templates = [
+        `Maritime development in ${absYear} ${era} marked significant progress in sailing techniques and vessel construction methods.`,
+        `Historical records from ${absYear} ${era} indicate continued evolution of nautical practices and seafaring traditions worldwide.`,
+        `Sailing innovations during ${absYear} ${era} contributed to advancing maritime commerce and exploration across various regions.`,
+        `The year ${absYear} ${era} witnessed ongoing developments in boat design and navigation methods used by sailors.`,
+        `Naval activities in ${absYear} ${era} reflected the era's technological capabilities and maritime cultural practices globally.`,
+        `Seafaring communities in ${absYear} ${era} maintained traditions while adapting to changing conditions and available resources.`,
+        `Maritime history from ${absYear} ${era} shows evidence of sailing vessels playing crucial roles in trade and travel.`,
+        `Nautical advancements during ${absYear} ${era} built upon previous knowledge while introducing incremental improvements to sailing.`,
+        `The sailing world in ${absYear} ${era} experienced gradual changes in vessel design and operational techniques.`,
+        `Historical sailing practices from ${absYear} ${era} demonstrate the continuous refinement of maritime skills and knowledge.`
+    ];
+    
+    // Use modulo to cycle through templates consistently
+    const templateIndex = Math.abs(year) % templates.length;
+    YEAR_DESCRIPTIONS[year] = templates[templateIndex];
+}
 
 export default function SailingTimeline() {
     const [selectedYear, setSelectedYear] = useState(2026);
@@ -28,8 +41,6 @@ export default function SailingTimeline() {
     const [scrollLeft, setScrollLeft] = useState(0);
 
     // Generate years from 6000 BC to 2026 AD
-    const startYear = -6000;
-    const endYear = 2026;
     const years: number[] = [];
     
     for (let year = startYear; year <= endYear; year++) {
@@ -47,7 +58,7 @@ export default function SailingTimeline() {
     };
 
     const getYearDescription = (year: number): string => {
-        return TIMELINE_DATA[year] || 'No description available';
+        return YEAR_DESCRIPTIONS[year] || 'No description available for this year.';
     };
 
     const handleMouseDown = (e: React.MouseEvent) => {
@@ -122,7 +133,7 @@ export default function SailingTimeline() {
 
                 <Card className="bg-card/50 backdrop-blur">
                     <CardContent className="p-6">
-                        <div className="mb-6 flex items-center justify-between gap-4">
+                        <div className="mb-6 flex items-center justify-between">
                             <Button
                                 variant="outline"
                                 size="icon"
@@ -131,11 +142,11 @@ export default function SailingTimeline() {
                             >
                                 <ChevronLeft className="h-4 w-4" />
                             </Button>
-                            <div className="text-center flex-1">
+                            <div className="text-center max-w-2xl">
                                 <div className="text-3xl font-bold text-primary mb-2">
                                     {formatYear(selectedYear)}
                                 </div>
-                                <div className="text-sm text-muted-foreground max-w-2xl mx-auto">
+                                <div className="text-sm text-muted-foreground">
                                     {getYearDescription(selectedYear)}
                                 </div>
                             </div>
@@ -177,7 +188,7 @@ export default function SailingTimeline() {
                                                     {formatYear(year)}
                                                 </div>
                                                 <div className="text-xs text-muted-foreground text-center line-clamp-3">
-                                                    {getYearDescription(year).substring(0, 50)}...
+                                                    {getYearDescription(year).split(' ').slice(0, 5).join(' ')}...
                                                 </div>
                                             </div>
                                         </button>
