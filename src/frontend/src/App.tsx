@@ -6,6 +6,7 @@ import WhatIsSailing from './components/WhatIsSailing';
 import WhyPeopleSail from './components/WhyPeopleSail';
 import AdventureAndNature from './components/AdventureAndNature';
 import TheArtOfSailing from './components/TheArtOfSailing';
+import WingFoils from './components/WingFoils';
 import Footer from './components/Footer';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
                     <WhyPeopleSail />
                     <AdventureAndNature />
                     <TheArtOfSailing />
+                    <WingFoils />
                 </main>
                 <Footer />
                 <Toaster />
