@@ -31,6 +31,9 @@ export default function Header() {
                     <a href="#hydrofoils" className="text-sm font-medium transition-colors hover:text-primary">
                         Hydrofoils
                     </a>
+                    <a href="#timeline" className="text-sm font-medium transition-colors hover:text-primary">
+                        Timeline
+                    </a>
                 </nav>
                 <Button
                     variant="ghost"

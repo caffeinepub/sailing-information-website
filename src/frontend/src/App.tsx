@@ -8,6 +8,7 @@ import AdventureAndNature from './components/AdventureAndNature';
 import TheArtOfSailing from './components/TheArtOfSailing';
 import WingFoils from './components/WingFoils';
 import Hydrofoils from './components/Hydrofoils';
+import SailingTimeline from './components/SailingTimeline';
 import Footer from './components/Footer';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
                     <TheArtOfSailing />
                     <WingFoils />
                     <Hydrofoils />
+                    <SailingTimeline />
                 </main>
                 <Footer />
                 <Toaster />
