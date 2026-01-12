@@ -1,0 +1,13 @@
+{
+  "frontend/src/App.tsx": "Main application component that wraps the entire app with ThemeProvider and renders the header, main content sections (Hero, WhatIsSailing, WhyPeopleSail, AdventureAndNature, TheArtOfSailing), footer, and toast notifications.",
+  "frontend/src/components/Header.tsx": "Sticky header component with branding (anchor icon and title), navigation links to all page sections including the new Art of Sailing section, and a theme toggle button for light/dark mode.",
+  "frontend/src/components/Hero.tsx": "Hero section with ocean gradient background, wave icon, and introductory heading about sailing.",
+  "frontend/src/components/WhatIsSailing.tsx": "Content section explaining what sailing is with detailed paragraphs and three feature cards highlighting wind power, navigation, and seamanship.",
+  "frontend/src/components/WhyPeopleSail.tsx": "Section describing why people love sailing with four detailed reason cards covering freedom, challenge, community, and adventure.",
+  "frontend/src/components/AdventureAndNature.tsx": "Section exploring sailing's connection to adventure and nature with descriptive text and four cards highlighting natural experiences plus an environmental connection callout.",
+  "frontend/src/components/Footer.tsx": "Simple footer component with copyright notice and attribution link to caffeine.ai with a heart icon.",
+  "frontend/src/index.css": "Global styles with OKLCH color system defining a maritime-inspired color palette with ocean blues (light, default, deep) and sunrise accent colors for both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with custom ocean and sunrise color tokens that reference CSS variables from the design system.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file as no backend queries are needed for this static content website.",
+  "frontend/src/components/TheArtOfSailing.tsx": "New content section exploring the artistry and craftsmanship of sailing with descriptive text and four feature cards highlighting sail trim, wind reading, maritime tradition, and boat handling, plus a detailed callout about the pursuit of excellence."
+}
