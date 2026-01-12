@@ -17,8 +17,8 @@ A simple informational website about sailing that presents educational content i
 - Feature cards within the Hydrofoils section highlighting key aspects: "Lift and Efficiency," "Speed Advantages," "Technological Design," and "Environmental Benefits"
 - Interactive sailing timeline spanning from approximately 6000 BC to 2026 AD
 - Timeline contains a complete static mapping with one entry for every year in the range
-- Timeline includes individual JSON or text files for the first 1000 years (6000 BC to 5001 BC) stored under `frontend/src/data/years/` directory
-- Each year file is named by year (e.g., `6000BC.json`, `5999BC.json`) and contains the same 20-word descriptive placeholder string about sailing history
+- Timeline includes individual JSON or text files for the first 1100 years (6000 BC to 4901 BC) stored under `frontend/src/data/years/` directory
+- Each year file is named by year (e.g., `6000BC.json`, `5999BC.json`, `5000BC.json`, `4999BC.json`) and contains the same 20-word descriptive placeholder string about sailing history
 - Dynamic loading of year files on demand as users navigate through the timeline
 - Loading and error states for missing or failed file loads
 - Each timeline entry includes a 20-word descriptive placeholder string about sailing history
@@ -44,10 +44,10 @@ A simple informational website about sailing that presents educational content i
 - Static content presentation with Timeline section
 - SailingTimeline component with scrollable/draggable timeline interface
 - Timeline component dynamically imports year files from `frontend/src/data/years/` directory
-- Individual JSON or text files for years 6000 BC to 5001 BC with 20-word placeholder strings
+- Individual JSON or text files for years 6000 BC to 4901 BC with 20-word placeholder strings
 - Lazy-loading implementation for year files as users scroll or navigate through timeline
 - Loading states and error handling for missing or failed file loads
-- Timeline data for years after 5001 BC remains embedded in frontend code
+- Timeline data for years after 4901 BC remains embedded in frontend code
 - Timeline renders each year and its corresponding text properly in the UI with consistent behavior
 - Timeline spinner displays individual year text strings with smooth loading transitions
 - Feature card components for both Wing Foils and Hydrofoils sections

@@ -3,10 +3,10 @@ import { Clock, ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
-// Generate remaining years with generic placeholders (5000 BC to 2026 AD)
+// Generate remaining years with generic placeholders (4900 BC to 2026 AD)
 const generateRemainingYears = (): Record<number, string> => {
     const data: Record<number, string> = {};
-    const startYear = -5000;
+    const startYear = -4900;
     const endYear = 2026;
     
     for (let year = startYear; year <= endYear; year++) {
@@ -51,10 +51,10 @@ export default function SailingTimeline() {
         }
     };
 
-    // Load year data dynamically for years 6000 BC to 5001 BC
+    // Load year data dynamically for years 6000 BC to 4901 BC
     const loadYearData = async (year: number) => {
-        // Only load for the first 1000 years (6000 BC to 5001 BC)
-        if (year > -5001 || year < -6000) {
+        // Only load for the first 1100 years (6000 BC to 4901 BC)
+        if (year > -4901 || year < -6000) {
             return;
         }
 
@@ -93,8 +93,8 @@ export default function SailingTimeline() {
     };
 
     const getYearDescription = (year: number): string => {
-        // For years 6000 BC to 5001 BC, use dynamically loaded data
-        if (year <= -5001 && year >= -6000) {
+        // For years 6000 BC to 4901 BC, use dynamically loaded data
+        if (year <= -4901 && year >= -6000) {
             if (loadingYears.has(year)) {
                 return 'Loading year data...';
             }
